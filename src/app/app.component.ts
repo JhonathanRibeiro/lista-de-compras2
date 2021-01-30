@@ -6,28 +6,40 @@ import swal from 'sweetalert';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
 export class AppComponent {
   title = 'Lista de compras';
   today: number = Date.now();
 
   list: any[] = [
-    { description:'Doritos 300g', amount:2 },
-    { description:'Coca-Cola 2L', amount:3 },
+    { description:'Doritos 300g',  amount:2 },
+    { description:'Coca-Cola 2L',  amount:3 },
     { description:'Pão de queijo', amount:2 },
-    { description:'Coxinha', amount:2 },
-    { description:'Pão francês', amount:10 },
-    { description:'Presunto', amount:4 },
-    { description:'Queijo', amount:2 },
+    { description:'Coxinha',       amount:2 },
+    { description:'Pão francês',   amount:10},
+    { description:'Presunto',      amount:4 },
+    { description:'Queijo',        amount:2 },
   ];
+  
   //metodo para adicionar um item na lista
-  public addItem(item, amount){
+  public addItem(item, qtde){
     //objeto com o nome e qtde do produto
     const newItem = {
       description: item,//nome 
-      amout: amount //quantidade 
+      amount: qtde //quantidade 
     }
-    //adiciona o objeto no array list
-    this.list.push(newItem);
+
+    if(item){
+      //adiciona o objeto no array list
+      this.list.push(newItem);
+    } else {
+      swal({
+        title: "Erro",
+        text: `Não é possível incluir um item sem nome na lista, \n 
+        preencha o campo descrição e tente novamente!`,
+        icon: "error"
+      })
+    }
   }
   /**
    * Metodo para excluir um item na lista com validação.
@@ -43,8 +55,8 @@ export class AppComponent {
      */
     swal({
       title: "Excluir item?",
-      text: `Excluir o item ${item.description} da lista?`,
-      icon: "warning", 
+      text:  `Excluir o item ${item.description} da lista?`,
+      icon:  "warning", 
       buttons: ['Cancelar', 'Excluir'],
       dangerMode: true,
     })

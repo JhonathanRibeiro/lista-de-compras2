@@ -1,0 +1,108 @@
+:root {
+    --standard-font:  Arial, Helvetica, sans-serif;
+    --muted: #eeeeee;
+    --secondary: #a0a0a0;
+    --danger: #f80240;
+    --primary: #1202f8;
+    --success: #04e03b;
+    --warning: #f8fc02;
+    --info: #0264f8;
+    --cursor: pointer;
+}
+* {
+    padding: 0;
+    margin: 0;
+}
+html {
+    height: 100%;
+}
+
+body {
+    background: var(--muted);
+    font-family: var(--standard-font);
+    height: 100%;
+}
+h2 {
+    font-weight: 100;
+    color: var(--primary);
+}
+table {
+    
+    font-family: var(--standard-font);
+    border-collapse: collapse;
+    margin: 0 auto;
+    width: 100%;
+}
+table td, table th {
+    border: 1px solid var(--muted);
+    padding: 8px;
+}
+table tr:nth-child(even){background-color: #f2f2f2;}
+table tr:hover {background-color: var(--muted);}
+table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #adadad;
+    color: white;
+}
+input {
+    background: #fff;
+    outline: none;
+    border: 1px solid var(--muted);
+    border-radius: 0.25rem;
+    padding: 0.75rem 1rem;
+}
+.print {
+    width: 100%;
+    margin: 30px 0 0;
+    text-align: center;
+}
+.btn-print {
+    padding: 0.30rem 10px;
+    cursor: pointer;
+}
+.form {
+    display: flex;
+    flex-wrap: wrap;
+}
+.form > input {
+    flex: 1 1 10ch;
+    margin: 0.5rem;
+}
+.form > input[type="text"] {
+    flex: 3 1 30ch;
+}
+
+.btn-primary {
+    background: var(--primary);
+    border: none;
+    outline: none;
+    border-radius: 0.25rem;
+    padding: 0.79rem 3rem;
+    cursor: pointer;
+    color: white;
+    align-self: center;
+}
+.btn-danger {
+    background: var(--danger);
+    border: none;
+    outline: none;
+    border-radius: 0.25rem;
+    padding: 0.35rem 15px;
+    cursor: pointer;
+    color: white;
+    align-self: center;
+}
+.btn-primary:hover {
+    box-shadow: 0 0.75rem 0.5rem -0.5rem #4d4d4d;
+}
+.container  {
+    width: 60%;
+    height: 100%;
+    background: #ffff;
+    padding: 20px;
+    margin: 0 auto;
+}
+.bg-white {background-color: white;}
+.td-btn-action {text-align: center;}

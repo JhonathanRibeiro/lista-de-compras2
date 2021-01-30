@@ -1,11 +1,19 @@
 <div class="container">
-    <div>
-        <h2>{{title}}</h2>
+  <h2>{{title}}</h2>
+    <div class="no-print">
         <div class="form">
             <input type="text" placeholder="Descrição" #descricao>
             <input type="number" placeholder="Quantidade" #qtde
             maxlength="3">
-            <button class="btn-primary" (click)="addItem(descricao.value, qtde.value)">Adicionar</button>
+            
+            <button 
+              class="btn-primary" 
+              (click)="addItem(descricao.value, qtde.value);
+              descricao.value = ''
+              ">
+              {{descricao.focus()}}
+              Adicionar
+            </button>
           </div>
     </div>
 <br>
@@ -14,7 +22,7 @@
           <th>Descrição</th>
           <th>Data</th>
           <th>Quantidade</th>
-          <th>Ações</th>
+          <th class="no-print">Ações</th>
         </tr>
         
         <tr *ngFor="let item of list">
@@ -22,13 +30,13 @@
           <td>{{today | date:'d/MM/yyyy'}}</td>
           <td>{{item.amount}}</td>
          
-          <td class="td-btn-action">
+          <td class="td-btn-action no-print">
               <button (click)="delete(item)" class="btn-danger">excluir</button>
           </td>
         </tr>
       </table>
 
-      <div class="print">
+      <div class="print no-print">
         <button class="btn-print" (click)="print()">imprimir</button>
       </div>
 </div>

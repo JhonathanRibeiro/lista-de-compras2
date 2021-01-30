@@ -1,0 +1,11 @@
+
+@media print {
+    h2 {
+        text-align: center;
+        color: var(--secondary);
+    }
+    .no-print {
+        display: none;
+    }
+
+}
