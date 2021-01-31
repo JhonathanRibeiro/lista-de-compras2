@@ -1,7 +1,9 @@
 :root {
     --standard-font:  Arial, Helvetica, sans-serif;
-    --muted: #eeeeee;
     --secondary: #a0a0a0;
+    --dark: #4d4d4d;
+    --light: #ffff;
+    --muted: #eeeeee;
     --danger: #f80240;
     --primary: #1202f8;
     --success: #04e03b;
@@ -9,13 +11,8 @@
     --info: #0264f8;
     --cursor: pointer;
 }
-* {
-    padding: 0;
-    margin: 0;
-}
-html {
-    height: 100%;
-}
+* {padding: 0;margin: 0;}
+html {height: 100%;}
 
 body {
     background: var(--muted);
@@ -27,7 +24,6 @@ h2 {
     color: var(--primary);
 }
 table {
-    
     font-family: var(--standard-font);
     border-collapse: collapse;
     margin: 0 auto;
@@ -37,14 +33,14 @@ table td, table th {
     border: 1px solid var(--muted);
     padding: 8px;
 }
-table tr:nth-child(even){background-color: #f2f2f2;}
+table tr:nth-child(even){background-color: var(--muted);}
 table tr:hover {background-color: var(--muted);}
 table th {
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: left;
-    background-color: #adadad;
-    color: white;
+    background-color: var(--secondary);
+    color: var(--light);
 }
 input {
     background: #fff;
@@ -73,7 +69,6 @@ input {
 .form > input[type="text"] {
     flex: 3 1 30ch;
 }
-
 .btn-primary {
     background: var(--primary);
     border: none;
@@ -81,7 +76,7 @@ input {
     border-radius: 0.25rem;
     padding: 0.79rem 3rem;
     cursor: pointer;
-    color: white;
+    color: var(--light);
     align-self: center;
 }
 .btn-danger {
@@ -91,18 +86,18 @@ input {
     border-radius: 0.25rem;
     padding: 0.35rem 15px;
     cursor: pointer;
-    color: white;
+    color: var(--light);
     align-self: center;
 }
 .btn-primary:hover {
-    box-shadow: 0 0.75rem 0.5rem -0.5rem #4d4d4d;
+    box-shadow: 0 0.75rem 0.5rem -0.5rem var(--dark);
 }
 .container  {
     width: 60%;
     height: 100%;
-    background: #ffff;
+    background: var(--light);
     padding: 20px;
     margin: 0 auto;
 }
-.bg-white {background-color: white;}
+.bg-white {background-color: var(--light);}
 .td-btn-action {text-align: center;}
