@@ -23,21 +23,21 @@ export class AppComponent {
   
   //metodo para adicionar um item na lista
   public addItem(item, qtde){
-    if(item){
-    //objeto com o nome e qtde do produto
-    const newItem = {
-      description: item,//nome 
-      amount: qtde //quantidade 
-    }
-      //adiciona o objeto no array list
-      this.list.push(newItem);
-    } else {
+    if(!item){
       swal({
         title: "Erro",
         text: `Não é possível incluir um item sem nome na lista, \n 
         preencha o campo descrição e tente novamente!`,
         icon: "error"
-      })
+      });
+    } else {
+      //objeto com o nome e qtde do produto
+      const newItem = {
+        description: item,//nome 
+        amount: qtde //quantidade 
+      }
+      //adiciona o objeto no array list
+      this.list.push(newItem);
     }
   }
   /**

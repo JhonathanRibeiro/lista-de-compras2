@@ -1,6 +1,6 @@
 :root {
     --standard-font:  Arial, Helvetica, sans-serif;
-    --secondary: #a0a0a0;
+    --secondary: #cfcfcf;
     --dark: #4d4d4d;
     --light: #ffff;
     --muted: #eeeeee;
@@ -29,7 +29,8 @@ table {
     width: 100%;
 }
 table td, table th {
-    border: 1px solid var(--muted);
+    /* border: 1px solid var(--muted); */
+    margin: 2px 0;
     padding: 8px;
 }
 table tr:nth-child(even){background-color: var(--muted);}
@@ -38,8 +39,8 @@ table th {
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: left;
-    background-color: var(--secondary);
-    color: var(--light);
+    /* background-color: var(--secondary); */
+    /* color: var(--light); */
 }
 input {
     background: #fff;
