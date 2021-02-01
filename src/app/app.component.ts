@@ -23,13 +23,12 @@ export class AppComponent {
   
   //metodo para adicionar um item na lista
   public addItem(item, qtde){
+    if(item){
     //objeto com o nome e qtde do produto
     const newItem = {
       description: item,//nome 
       amount: qtde //quantidade 
     }
-
-    if(item){
       //adiciona o objeto no array list
       this.list.push(newItem);
     } else {
