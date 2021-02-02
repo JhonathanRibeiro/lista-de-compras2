@@ -11,52 +11,56 @@
     --info: #0264f8;
     --cursor: pointer;
 }
-* {padding: 0;margin: 0;}
-html {height: 100%;}
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
 body {
     background: var(--muted);
     font-family: var(--standard-font);
-    height: 100%;
-}
-h2 {
-    font-weight: 100;
-    color: var(--primary);
-}
-table {
-    font-family: var(--standard-font);
-    border-collapse: collapse;
-    margin: 0 auto;
-    width: 100%;
-}
-table td, table th {
-    /* border: 1px solid var(--muted); */
-    margin: 2px 0;
-    padding: 8px;
-}
-table tr:nth-child(even){background-color: var(--muted);}
-table tr:hover {background-color: var(--muted);}
-table th {
-    padding-top: 12px;
-    padding-bottom: 12px;
-    text-align: left;
-    /* background-color: var(--secondary); */
-    /* color: var(--light); */
 }
 input {
     background: #fff;
     outline: none;
     border: 1px solid var(--muted);
-    border-radius: 0.25rem;
     padding: 0.75rem 1rem;
+}
+.table {
+    font-family: var(--standard-font);
+    border-collapse: collapse;
+    margin: 0 auto;
+    width: 100%;
+}
+.table td, .table th {
+    margin: 2px 0;
+    padding: 8px;
+}
+.table tr:nth-child(even){background-color: var(--muted);}
+.table tr:hover {background-color: var(--muted);}
+.table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+}
+.p-2 {padding: 1rem;}
+.border-radius {
+    border-radius: 0.25rem;
+}
+.title {
+    font-weight: 100;
+    text-align: center;
+    color: var(--dark);
+    padding: 0.75em 0;
+}
+.text-center {
+    text-align: center;
 }
 .print {
     width: 100%;
     margin: 30px 0 0;
     text-align: center;
-}
-.btn-print {
-    padding: 0.30rem 10px;
-    cursor: pointer;
 }
 .form {
     display: flex;
@@ -69,35 +73,33 @@ input {
 .form > input[type="text"] {
     flex: 3 1 30ch;
 }
-.btn-primary {
-    background: var(--primary);
+.btn {
     border: none;
     outline: none;
-    border-radius: 0.25rem;
-    padding: 0.79rem 3rem;
     cursor: pointer;
-    color: var(--light);
     align-self: center;
+}
+.btn-print {
+    padding: 0.50rem 20px;
+}
+.btn-primary {
+    background: var(--primary);
+    padding: 0.79rem 3rem;
+    color: var(--light);
 }
 .btn-danger {
     background: var(--danger);
-    border: none;
-    outline: none;
-    border-radius: 0.25rem;
     padding: 0.35rem 15px;
-    cursor: pointer;
     color: var(--light);
-    align-self: center;
 }
 .btn-primary:hover {
     box-shadow: 0 0.75rem 0.5rem -0.5rem var(--dark);
 }
 .container  {
     width: 60%;
-    height: 100%;
-    background: var(--light);
     padding: 20px;
-    margin: 0 auto;
+    margin: 20px auto;
 }
-.bg-white {background-color: var(--light);}
+.bg-white {background: var(--light);}
 .td-btn-action {text-align: center;}
+/* Desenvolvido por Jhonathan Ribeiro 2021&copy; */

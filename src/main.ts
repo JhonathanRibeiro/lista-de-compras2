@@ -1,3 +1,4 @@
+/* Desenvolvido por Jhonathan Ribeiro 2021&copy; */
 import { enableProdMode } from '@angular/core';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
